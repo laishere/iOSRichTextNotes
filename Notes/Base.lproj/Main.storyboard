@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="TaT-gG-auY">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--笔记详情-->
+        <scene sceneID="bBY-oi-bHU">
+            <objects>
+                <viewController id="TaT-gG-auY" customClass="NotesDetailViewController" customModule="Notes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" clipsSubviews="YES" contentMode="scaleToFill" id="vhD-Q4-0d4">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gvf-zO-mu7" customClass="NotesView" customModule="Notes" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="59" width="393" height="709"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UCh-z5-m0G" customClass="NotesBottomMenuView" customModule="Notes" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="768" width="393" height="50"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" button="YES"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="eFf-rh-E4Y"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="EcU-vb-L9P"/>
+                        <keyboardLayoutGuide key="keyboard" id="1yp-ih-pfT"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="EcU-vb-L9P" firstAttribute="trailing" secondItem="UCh-z5-m0G" secondAttribute="trailing" id="5Uz-Zi-fYi"/>
+                            <constraint firstItem="gvf-zO-mu7" firstAttribute="bottom" secondItem="UCh-z5-m0G" secondAttribute="top" id="7rC-WQ-qjU"/>
+                            <constraint firstItem="UCh-z5-m0G" firstAttribute="bottom" secondItem="1yp-ih-pfT" secondAttribute="top" id="AmE-qy-eKI"/>
+                            <constraint firstItem="EcU-vb-L9P" firstAttribute="bottom" secondItem="UCh-z5-m0G" secondAttribute="bottom" priority="750" id="E1v-BQ-ly5"/>
+                            <constraint firstItem="UCh-z5-m0G" firstAttribute="leading" secondItem="EcU-vb-L9P" secondAttribute="leading" id="K5h-TQ-PRN"/>
+                            <constraint firstItem="gvf-zO-mu7" firstAttribute="leading" secondItem="EcU-vb-L9P" secondAttribute="leading" id="OMK-Sg-L9L"/>
+                            <constraint firstItem="gvf-zO-mu7" firstAttribute="top" secondItem="EcU-vb-L9P" secondAttribute="top" id="VpE-ey-r66"/>
+                            <constraint firstItem="EcU-vb-L9P" firstAttribute="trailing" secondItem="gvf-zO-mu7" secondAttribute="trailing" id="wQp-oh-SDU"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="笔记详情" id="sKb-yL-knf"/>
+                    <connections>
+                        <outlet property="menuView" destination="UCh-z5-m0G" id="sDr-up-WX2"/>
+                        <outlet property="notesView" destination="gvf-zO-mu7" id="1x7-T3-ayh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4J7-5b-dbS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-941" y="-661"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
